@@ -26,8 +26,3 @@ class ImageReader:
         img = Image.open(image)
         extracted_text = pytesseract.image_to_string(img, lang=lang)
         return extracted_text
-
-if __name__ == '__main__':
-    ir = ImageReader(OS.Mac)
-    text = ir.extract_text('question.png', lang='en' )
-    print("Document Text: ", text)
